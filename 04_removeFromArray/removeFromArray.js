@@ -9,26 +9,14 @@
 const removeFromArray = function(defaultArray, ...args) {
     let newArray = defaultArray;
     let checkArray = Array.prototype.slice.call(args);
-    let x = 0;
 
-    console.log(defaultArray);
-    console.log(checkArray);
+    newArray = newArray.filter(val => !checkArray.includes(val));
 
-
-    while (x < defaultArray.length) {
-        for (let i = 0; i <= checkArray.length; i++) {
-            if (newArray[x] === checkArray[i]) {
-                newArray.slice(i, i+1);
-                
-            } 
-        }
-
-        ++x;
-    }
+    return newArray
     
 };
 
-console.log(removeFromArray([1,2,3,4], 3, 4, 5, 6));
+console.log(removeFromArray([1,2,3,4], 3, 4));
 
 // Do not edit below this line
 module.exports = removeFromArray;
