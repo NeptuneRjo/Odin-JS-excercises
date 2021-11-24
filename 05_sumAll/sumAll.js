@@ -18,7 +18,7 @@ const sumAll = function(value1, value2) {
     // }
 
 
-    if ((isNaN(value1) || isNaN(value2))) {
+    if ((typeof(value1)!== "number" || typeof(value2)!== "number")) {
         return sumOfValues = "ERROR"
 
     }  else if ((value1 < 0) || (value2 < 0)) {
@@ -28,8 +28,10 @@ const sumAll = function(value1, value2) {
         for (i = value1; i >= value2; i--) {
             sumOfValues += i;
         }
+
     } else {
         for (i = value1; i <= value2; i++) {
+            console.log(value1, value2);
             sumOfValues += i;
         }
     }
@@ -37,7 +39,6 @@ const sumAll = function(value1, value2) {
     return sumOfValues
 };
 
-console.log(sumAll(123, 1))
 
 
 // Do not edit below this line
