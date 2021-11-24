@@ -18,7 +18,7 @@ const sumAll = function(value1, value2) {
     // }
 
 
-    if ((typeof(value1 != "number") || typeof(value2 != "number"))) {
+    if ((isNaN(value1) || isNaN(value2))) {
         return sumOfValues = "ERROR"
 
     }  else if ((value1 < 0) || (value2 < 0)) {
@@ -37,7 +37,8 @@ const sumAll = function(value1, value2) {
     return sumOfValues
 };
 
-console.log(sumAll(-1, 2))
+console.log(sumAll(123, 1))
+
 
 // Do not edit below this line
 module.exports = sumAll;
