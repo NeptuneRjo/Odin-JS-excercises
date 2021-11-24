@@ -1,17 +1,25 @@
 const leapYears = function(year) {
-    let yearRemainder = year % 4;
 
     if (year < 1582) {
         return false
-    } else {
-        if (yearRemainder != 1) {
-            if (yearRemainder == 0) {
+
+    } else if (year % 4 == 0) {
+        if (year % 100 == 0) {
+            if (year % 400 == 0) {
                 return true
+
+            } else {
+                return false    
             }
+
         } else {
-            return false
+            return true
         }
+        
+    } else {
+        return false
     }
+        
 
 };
 
