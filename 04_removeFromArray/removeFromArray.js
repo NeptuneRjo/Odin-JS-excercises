@@ -13,10 +13,8 @@ const removeFromArray = function(defaultArray, ...args) {
     newArray = newArray.filter(val => !checkArray.includes(val));
 
     return newArray
-    
 };
 
-console.log(removeFromArray([1,2,3,4], 3, 4));
 
 // Do not edit below this line
 module.exports = removeFromArray;
